@@ -5,9 +5,20 @@ using UnityEngine.SceneManagement; // 忘れない！！
 
 public class SceneChange : MonoBehaviour
 {
-    public void LoadScene()
+    public void stage01()
     {
         //シーン名をここに入力
         SceneManager.LoadScene("Stage1");
+    }
+
+    public void stage02()
+    {
+        //シーン名をここに入力
+        SceneManager.LoadScene("Stage2");
+    }
+    public void stage03()
+    {
+        //シーン名をここに入力
+        SceneManager.LoadScene("Stage3");
     }
 }
