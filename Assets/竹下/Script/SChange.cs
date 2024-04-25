@@ -8,7 +8,7 @@ public class SChange : MonoBehaviour
     public void Title()
     {
         //ƒV[ƒ“–¼‚ğ‚±‚±‚É“ü—Í
-        SceneManager.LoadScene("Taitole");
+        SceneManager.LoadScene("Title");
     }
 
     public void Explanation1()
