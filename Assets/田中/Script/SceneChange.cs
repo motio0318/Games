@@ -33,16 +33,29 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene("Stage2");
     }
 
-    public void stage03()
+    //public void stage03()
+    //{
+    //    Instantiate(submitSE);
+
+    //    Invoke("SceneChange3", 0.5f);
+
+    //}
+    //public void SceneChange3()
+    //{
+    //    //シーン名をここに入力
+    //    SceneManager.LoadScene("Stage3");
+    //}
+
+    public void Return()
     {
         Instantiate(submitSE);
 
-        Invoke("SceneChange3", 0.5f);
+        Invoke("SceneChangeReturn", 0.5f);
 
     }
-    public void SceneChange3()
+    public void SceneChangeReturn()
     {
         //シーン名をここに入力
-        SceneManager.LoadScene("Stage3");
+        SceneManager.LoadScene("Title");
     }
 }
