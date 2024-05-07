@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class HpBar : MonoBehaviour
+
+public class Button : MonoBehaviour
 {
+
+    public HPManager hpManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        HPManager hpManager = GetComponentInParent<HPManager>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void OnButtonPressed()
     {
-        
+        hpManager.DecreaseHp(1);
     }
 }
