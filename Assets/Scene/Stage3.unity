@@ -271,23 +271,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43087391}
   m_CullTransparentMesh: 1
---- !u!1 &421076020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3002928926306049148, guid: f0660e76c3ae6194eae0086dff1d2fc0, type: 3}
-  m_PrefabInstance: {fileID: 3002928926724882504}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &421076024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421076020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be3bf8d2eb25ac546b09715790f46db7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &619144712
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,8 +771,10 @@ GameObject:
   - component: {fileID: 1188344366}
   - component: {fileID: 1188344368}
   - component: {fileID: 1188344367}
+  - component: {fileID: 1188344369}
+  - component: {fileID: 1188344370}
   m_Layer: 5
-  m_Name: Qize
+  m_Name: question
   m_TagString: Qize
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -848,7 +833,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u554F\u984C"
+  m_Text: '
+
+'
 --- !u!222 &1188344368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -857,6 +844,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188344365}
   m_CullTransparentMesh: 1
+--- !u!114 &1188344369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188344365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb5fe22dd90eae47a9eb2855ffc1ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data:
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+  - question: 
+--- !u!114 &1188344370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188344365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd454f06225ae6246a1f9ddda0fab81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1199924821
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +980,7 @@ GameObject:
   - component: {fileID: 1380090959}
   - component: {fileID: 1380090958}
   m_Layer: 0
-  m_Name: Qize
+  m_Name: Quiz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
