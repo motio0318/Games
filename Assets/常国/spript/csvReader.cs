@@ -11,6 +11,9 @@ public class csvReader : MonoBehaviour
 
     void Start()
     {
+        //ランダム1～20
+        int rnd = Random.Range(1, 21);
+
         csvFile = Resources.Load("question") as TextAsset; // ResourcesにあるCSVファイルを格納
         StringReader reader = new StringReader(csvFile.text); // TextAssetをStringReaderに変換
 
@@ -28,8 +31,7 @@ public class csvReader : MonoBehaviour
             //特定の名前のオブジェクトを検索してアクセス
             Text qLabel = GameObject.Find("question").GetComponentInChildren<Text>();
             //データをセットすることで、既存情報を上書きできる
-            qLabel.text = csvData[i][0];
-            //とりあえず文字出せたけどここにランダム要素を追加する
+            qLabel.text = csvData[rnd][0];//rndでランダムに1～20問出題
         }
     }
 }
