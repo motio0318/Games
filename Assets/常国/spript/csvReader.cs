@@ -13,6 +13,7 @@ public class csvReader : MonoBehaviour
     {
         //ランダム1～20
         int rnd = Random.Range(1, 21);
+        int rnd2 = Random.Range(1, 5);
 
         csvFile = Resources.Load("question") as TextAsset; // ResourcesにあるCSVファイルを格納
         StringReader reader = new StringReader(csvFile.text); // TextAssetをStringReaderに変換
@@ -27,11 +28,21 @@ public class csvReader : MonoBehaviour
         {
             // データの表示
             Debug.Log(csvData[i][0]);
+            Debug.Log(csvData[i][1]);
 
             //特定の名前のオブジェクトを検索してアクセス
             Text qLabel = GameObject.Find("question").GetComponentInChildren<Text>();
+            Text s1Label = GameObject.Find("select1").GetComponentInChildren<Text>();
+            Text s2Label = GameObject.Find("select2").GetComponentInChildren<Text>();
+            Text s3Label = GameObject.Find("select3").GetComponentInChildren<Text>();
+            Text s4Label = GameObject.Find("select4").GetComponentInChildren<Text>();
             //データをセットすることで、既存情報を上書きできる
+
             qLabel.text = csvData[rnd][0];//rndでランダムに1～20問出題
+            s1Label.text = csvData[rnd][1];
+            s2Label.text = csvData[rnd][2];
+            s3Label.text = csvData[rnd][3];
+            s4Label.text = csvData[rnd][4];
         }
     }
 }

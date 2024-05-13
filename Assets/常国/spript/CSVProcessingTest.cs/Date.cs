@@ -6,7 +6,5 @@ using UnityEngine;
 public class Data
 {
     public string question;
-    //public int HP;
-    //public int ATK;
-    //public int DEF;
+    public string[] select;
 }
