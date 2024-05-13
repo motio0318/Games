@@ -22,11 +22,12 @@ public class HPManager : MonoBehaviour
 
     public void DecreaseHp(int amount)
     {
-        currentHP -= amount;
-        if (currentHP < 0)
-        {
-            currentHP = 0;
-        }
+            currentHP -= amount;
+            if (currentHP < 0)
+            {
+                currentHP = 0;
+            }
+        
         UpdateHPBar();
     }
 
