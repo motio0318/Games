@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 619144715}
   - component: {fileID: 619144714}
   - component: {fileID: 619144717}
+  - component: {fileID: 619144718}
   m_Layer: 5
   m_Name: select4
   m_TagString: ansButton
@@ -382,7 +383,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 619144715}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 619144712}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &619144715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +446,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &619144718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619144712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b60c2f8a22a6f448adc2e639ab5222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
 --- !u!1 &714071783
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +472,7 @@ GameObject:
   - component: {fileID: 714071786}
   - component: {fileID: 714071785}
   - component: {fileID: 714071788}
+  - component: {fileID: 714071789}
   m_Layer: 5
   m_Name: select1
   m_TagString: ansButton
@@ -517,7 +544,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 714071786}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 714071783}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &714071786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +607,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &714071789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714071783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b60c2f8a22a6f448adc2e639ab5222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
 --- !u!1 &794131470
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +717,7 @@ GameObject:
   - component: {fileID: 893632183}
   - component: {fileID: 893632182}
   - component: {fileID: 893632185}
+  - component: {fileID: 893632186}
   m_Layer: 5
   m_Name: select3
   m_TagString: ansButton
@@ -736,7 +789,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 893632183}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 893632180}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &893632183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,6 +852,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &893632186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893632180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b60c2f8a22a6f448adc2e639ab5222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
 --- !u!1 &1118804582
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,45 +1053,105 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
   - question: 
-    select: []
+    select1: 
+    select2: 
+    select3: 
+    select4: 
 --- !u!114 &1188344370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,6 +1465,7 @@ GameObject:
   - component: {fileID: 1481478030}
   - component: {fileID: 1481478029}
   - component: {fileID: 1481478032}
+  - component: {fileID: 1481478033}
   m_Layer: 5
   m_Name: select2
   m_TagString: ansButton
@@ -1398,7 +1537,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1481478030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1481478027}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1481478030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,6 +1600,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1481478033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481478027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b60c2f8a22a6f448adc2e639ab5222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
 --- !u!1 &1539459873
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,26 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // 忘れない！！
+using UnityEngine.UI;//UI オブジェクトを扱う時は必須
+using System.IO;　//追加
 
 public class judgementButton : MonoBehaviour
 {
+    private TextAsset csvFile; // CSVファイル
+    private List<string[]> csvData = new List<string[]>(); // CSVファイルの中身を入れるリスト
+
+
     [SerializeField, Header("決定音")]
     private GameObject submitSE;
 
     private void Start()
     {
-        Instantiate(submitSE);
+        csvFile = Resources.Load("question") as TextAsset; // ResourcesにあるCSVファイルを格納
+        StringReader reader = new StringReader(csvFile.text); // TextAssetをStringReaderに変換
 
-        /*if(//もしCSVファイルのselect3が押されたら)
+        while (reader.Peek() != -1)
+        {
+            string line = reader.ReadLine(); // 1行ずつ読み込む
+            csvData.Add(line.Split(',')); // csvDataリストに追加する
+
+        }
+
+        Instantiate(submitSE);
+    }
+
+    public void OnClick()
+    {
+
+        /*if(//もしselect3だったら)
          {
-             Invoke("SceneChange", 5.0f);
+             Invoke("SceneChange", 0.5f);
          }
         */
-        /*else if (//CSVファイルのselect1,CSVファイルのselect2,CSVファイルのselect4が押されたら)
+        /*else if (//もしselect1だったら,もしselect2だったら,もしselect4だったら)
         {
-            Invoke("SceneChange2", 5.0f);
+            Invoke("SceneChange2", 0.5f);
         }*/
-
     }
 
     public void SceneChange()
