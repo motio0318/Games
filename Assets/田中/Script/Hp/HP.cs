@@ -32,14 +32,17 @@ public class HP: MonoBehaviour
     void Update()
     {
 
+           
 
         // スペースキーが押されたかどうかを検出
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            //現在のHPからダメージを引く
             currentHp = currentHp - damage;
+            //現在のHPからダメージを引く
             slider.value = currentHp / (float)maxHp;
+
+
             // currentHpの保存
             PlayerPrefs.SetInt("currentHp", currentHp);
 

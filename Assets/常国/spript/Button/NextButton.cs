@@ -18,7 +18,7 @@ public class NextButton : MonoBehaviour
     public void SceneChange()
     {
         //ƒV[ƒ“–¼‚ğ‚±‚±‚É“ü—Í
-        SceneManager.LoadScene("Stage3 qestion");
+        SceneManager.LoadScene("Stage1");
     }
 
 }
