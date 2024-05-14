@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scene/Stage3 qestion.unity
     guid: 675c880894f486b44adf1c11e69e0f39
   - enabled: 1
+    path: Assets/Scene/Stage3 right.unity
+    guid: 657d995833ebe614fbfe8ee0cb749c11
+  - enabled: 1
+    path: Assets/Scene/Stage3 interval.unity
+    guid: 441f359fe0239104995df5f12468b2c9
+  - enabled: 1
     path: Assets/Scene/clear.unity
     guid: 59b18c4824e11f1478f440eeae4dd6b5
   - enabled: 1

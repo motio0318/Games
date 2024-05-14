@@ -22,6 +22,7 @@ public class csvReader : MonoBehaviour
         {
             string line = reader.ReadLine(); // 1行ずつ読み込む
             csvData.Add(line.Split(',')); // csvDataリストに追加する
+
         }
 
         for (int i = 0; i < csvData.Count; i++) // csvDataリストの条件を満たす値の数（全て）
@@ -29,6 +30,9 @@ public class csvReader : MonoBehaviour
             // データの表示
             Debug.Log(csvData[i][0]);
             Debug.Log(csvData[i][1]);
+            Debug.Log(csvData[i][2]);
+            Debug.Log(csvData[i][3]);
+            Debug.Log(csvData[i][4]);
 
             //特定の名前のオブジェクトを検索してアクセス
             Text qLabel = GameObject.Find("question").GetComponentInChildren<Text>();
@@ -39,6 +43,7 @@ public class csvReader : MonoBehaviour
             //データをセットすることで、既存情報を上書きできる
 
             qLabel.text = csvData[rnd][0];//rndでランダムに1～20問出題
+
             s1Label.text = csvData[rnd][1];
             s2Label.text = csvData[rnd][2];
             s3Label.text = csvData[rnd][3];
