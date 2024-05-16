@@ -11,7 +11,7 @@ public class beforQuestione : MonoBehaviour
     void Start()
     {
         // スライダーを取得する
-        _slider = GameObject.Find("HPbar").GetComponent<Slider>();
+        _slider = GameObject.Find("LoadBar").GetComponent<Slider>();
     }
 
     float _hp = 0;
@@ -22,7 +22,12 @@ public class beforQuestione : MonoBehaviour
         if (_hp > 16)
         {
             // 最大を超えたら0に戻す
-            _hp = 0;
+            //_hp = 0;
+
+
+            //シーン名をここに入力
+            SceneManager.LoadScene("Stage3 interval");
+
         }
 
         // HPゲージに値を設定

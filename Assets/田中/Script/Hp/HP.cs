@@ -56,6 +56,10 @@ public class HP: MonoBehaviour
         if(currentHp <= 0)
         {
             Destroy(gameObject);
+
+            //ƒV[ƒ“–¼‚ð‚±‚±‚É“ü—Í
+            SceneManager.LoadScene("clear");
+
         }
 
 
