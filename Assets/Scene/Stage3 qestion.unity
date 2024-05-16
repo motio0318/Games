@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd454f06225ae6246a1f9ddda0fab81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s3label: 
 --- !u!114 &43087396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +311,6 @@ GameObject:
   - component: {fileID: 619144716}
   - component: {fileID: 619144715}
   - component: {fileID: 619144714}
-  - component: {fileID: 619144717}
   - component: {fileID: 619144718}
   m_Layer: 5
   m_Name: select4
@@ -384,13 +384,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 619144712}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 619144718}
+        m_TargetAssemblyTypeName: judgementButton, Assembly-CSharp
+        m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -434,18 +434,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619144712}
   m_CullTransparentMesh: 1
---- !u!114 &619144717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619144712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &619144718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
+  question: {fileID: 1188344365}
 --- !u!1 &714071783
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +460,6 @@ GameObject:
   - component: {fileID: 714071787}
   - component: {fileID: 714071786}
   - component: {fileID: 714071785}
-  - component: {fileID: 714071788}
   - component: {fileID: 714071789}
   m_Layer: 5
   m_Name: select1
@@ -545,14 +533,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 714071783}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 714071789}
+        m_TargetAssemblyTypeName: judgementButton, Assembly-CSharp
+        m_MethodName: Push_Button
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -595,18 +583,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714071783}
   m_CullTransparentMesh: 1
---- !u!114 &714071788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714071783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &714071789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
+  question: {fileID: 1188344365}
 --- !u!1 &794131470
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +693,6 @@ GameObject:
   - component: {fileID: 893632184}
   - component: {fileID: 893632183}
   - component: {fileID: 893632182}
-  - component: {fileID: 893632185}
   - component: {fileID: 893632186}
   m_Layer: 5
   m_Name: select3
@@ -790,13 +766,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893632180}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 893632186}
+        m_TargetAssemblyTypeName: judgementButton, Assembly-CSharp
+        m_MethodName: Push_Button
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -840,18 +816,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893632180}
   m_CullTransparentMesh: 1
---- !u!114 &893632185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893632180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &893632186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
+  question: {fileID: 1188344365}
 --- !u!1 &1118804582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd454f06225ae6246a1f9ddda0fab81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s3label: 
 --- !u!1 &1199924821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd454f06225ae6246a1f9ddda0fab81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s3label: 
 --- !u!114 &1199924826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,7 +1431,6 @@ GameObject:
   - component: {fileID: 1481478031}
   - component: {fileID: 1481478030}
   - component: {fileID: 1481478029}
-  - component: {fileID: 1481478032}
   - component: {fileID: 1481478033}
   m_Layer: 5
   m_Name: select2
@@ -1538,13 +1504,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1481478027}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1481478033}
+        m_TargetAssemblyTypeName: judgementButton, Assembly-CSharp
+        m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1588,18 +1554,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481478027}
   m_CullTransparentMesh: 1
---- !u!114 &1481478032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481478027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6559f0ad75fd0de409cae4a80c6d6c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1481478033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,6 +1567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
+  question: {fileID: 0}
 --- !u!1 &1539459873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd454f06225ae6246a1f9ddda0fab81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s3label: 
 --- !u!114 &1571152440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,6 +1954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd454f06225ae6246a1f9ddda0fab81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s3label: 
 --- !u!114 &1936010366
 MonoBehaviour:
   m_ObjectHideFlags: 0

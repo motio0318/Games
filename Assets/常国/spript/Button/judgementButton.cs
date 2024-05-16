@@ -10,37 +10,41 @@ public class judgementButton : MonoBehaviour
     private TextAsset csvFile; // CSVファイル
     private List<string[]> csvData = new List<string[]>(); // CSVファイルの中身を入れるリスト
 
-
     [SerializeField, Header("決定音")]
     private GameObject submitSE;
 
+    int rnd2 = Random.Range(1, 5);
+
+    csvReader csvreader;
+    public GameObject question;
+
     private void Start()
     {
-        csvFile = Resources.Load("question") as TextAsset; // ResourcesにあるCSVファイルを格納
-        StringReader reader = new StringReader(csvFile.text); // TextAssetをStringReaderに変換
-
-        while (reader.Peek() != -1)
-        {
-            string line = reader.ReadLine(); // 1行ずつ読み込む
-            csvData.Add(line.Split(',')); // csvDataリストに追加する
-
-        }
-
         Instantiate(submitSE);
+
+        csvreader = question.GetComponent<csvReader>();
+       
+        csvReader.instance.Randam();
     }
 
-    public void OnClick()
+    public void Push_Button()//CSVから４つのボタンのそれぞれの引数を取得する
     {
-
-        /*if(//もしselect3だったら)
-         {
-             Invoke("SceneChange", 0.5f);
-         }
-        */
-        /*else if (//もしselect1だったら,もしselect2だったら,もしselect4だったら)
+        Text a = GetComponentInChildren<Text>();
+        if ( a.text == csvreader.s3label) 
         {
-            Invoke("SceneChange2", 0.5f);
-        }*/
+            //Invoke("SceneChange", 0.5f);
+            SceneChange();
+        }
+            
+        //if (rnd2 == 3)//もしselect3だったら
+        //{
+        //    Invoke("SceneChange", 0.5f);
+        //}
+
+        //else if (rnd2 != 3)//もしselect1だったら,もしselect2だったら,もしselect4だったら)
+        //{
+        //    Invoke("SceneChange2", 0.5f);
+        //}
     }
 
     public void SceneChange()
@@ -52,6 +56,6 @@ public class judgementButton : MonoBehaviour
     public void SceneChange2()
     {
         //シーン名をここに入力
-        SceneManager.LoadScene("Stage3 qestion");//不正解へ
+        SceneManager.LoadScene("Stage3 interval");//不正解へ
     }
 }
