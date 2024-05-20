@@ -10,7 +10,7 @@ public class secne : MonoBehaviour
 
     public void Compar(string sceneName)
     {
-        SceneManager.LoadScene("STAGE");
+        SceneManager.LoadScene("Stage1");
     }
 
 }
