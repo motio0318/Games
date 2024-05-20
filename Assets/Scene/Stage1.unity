@@ -649,7 +649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &888099543
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5507,8 +5507,7 @@ Transform:
   m_LocalPosition: {x: 0.06, y: 0.89, z: -2.21}
   m_LocalScale: {x: 0.6, y: 0.52, z: 1.45}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1189674233}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 5.47, y: 1.55, z: 0}
@@ -5646,6 +5645,34 @@ PrefabInstance:
     - target: {fileID: 4996102518656156279, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
       propertyPath: m_Color.r
       value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977575327437296873, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977575327437296873, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977575327437296873, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1722896974}
+    - target: {fileID: 7977575327437296873, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977575327437296873, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977575327437296873, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: heart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977575327437296873, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a9a8e4baf02104ab2531eba04dcf73, type: 3}
@@ -10511,13 +10538,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189674230}
-  m_LocalRotation: {x: -0.04771227, y: -0.013510439, z: 0.0006454078, w: 0.9987696}
-  m_LocalPosition: {x: 0.21991737, y: 1.4994504, z: 0.43612444}
-  m_LocalScale: {x: 5.3445153, y: 5.979744, z: 0.69399446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.21094011, y: 1.6058822, z: -1.51}
+  m_LocalScale: {x: 3.21, y: 3.16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 888099545}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1722896973
 GameObject:

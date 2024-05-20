@@ -21,24 +21,5 @@ public class heart : MonoBehaviour
             //lifeArray[lifePoint - 1].SetActive(false);
             //lifePoint--;
         }
-
-
-        else
-        {
-            // 敵のHPが０になったら敵オブジェクトを破壊する。
-            if (enemyHeart == 0)
-            {
-
-                // オブジェクトを破壊する
-                Destroy(transform.root.gameObject);
-
-
-            }
-
-        }
-
-
-
-        Debug.Log(states.Heart);
     }
 }
