@@ -10,9 +10,13 @@ public class csvReader : MonoBehaviour
     private List<string[]> csvData = new List<string[]>(); // CSVファイルの中身を入れるリスト
 
     public string s3label ;
+    public int rnd;
 
     void Start()
     {
+        rnd = Random.Range(1, 21);
+        //int rnd2 = Random.Range(1, 5);
+
         Randam();
     }
 
@@ -29,8 +33,7 @@ public class csvReader : MonoBehaviour
     public void Randam()
     {
         //ランダム1～20
-        int rnd = Random.Range(1, 21);
-        int rnd2 = Random.Range(1, 5);
+        
 
         csvFile = Resources.Load("question") as TextAsset; // ResourcesにあるCSVファイルを格納
         StringReader reader = new StringReader(csvFile.text); // TextAssetをStringReaderに変換
@@ -42,14 +45,15 @@ public class csvReader : MonoBehaviour
 
         }
 
+
         for (int i = 0; i < csvData.Count; i++) // csvDataリストの条件を満たす値の数（全て）
         {
             // データの表示
-            Debug.Log(csvData[i][0]);
-            Debug.Log(csvData[i][1]);
-            Debug.Log(csvData[i][2]);
-            Debug.Log(csvData[i][3]);
-            Debug.Log(csvData[i][4]);
+            //Debug.Log(csvData[i][0]);
+          //  Debug.Log(csvData[i][1]);
+           // Debug.Log(csvData[i][2]);
+           // Debug.Log(csvData[i][3]);
+           // Debug.Log(csvData[i][4]);
 
             //特定の名前のオブジェクトを検索してアクセス
             Text qLabel  = GameObject.Find("question").GetComponentInChildren<Text>();
@@ -66,7 +70,10 @@ public class csvReader : MonoBehaviour
             s3Label.text = csvData[rnd][3];
             s4Label.text = csvData[rnd][4];
 
+            Debug.Log(rnd);
+
             s3label = s3Label.text;
         }
+        Debug.Log(s3label);
     }
 }

@@ -13,7 +13,7 @@ public class judgementButton : MonoBehaviour
     [SerializeField, Header("決定音")]
     private GameObject submitSE;
 
-    int rnd2 = Random.Range(1, 5);
+    //int rnd2 = Random.Range(1, 5);
 
     csvReader csvreader;
     public GameObject question;
@@ -24,18 +24,24 @@ public class judgementButton : MonoBehaviour
 
         csvreader = question.GetComponent<csvReader>();
        
-        csvReader.instance.Randam();
+        //csvReader.instance.Randam();
     }
 
     public void Push_Button()//CSVから４つのボタンのそれぞれの引数を取得する
     {
+        //csvreader = question.GetComponent<csvReader>();
         Text a = GetComponentInChildren<Text>();
+        //Debug.Log(a.text);
+        //Debug.Log(csvreader.s3label);
         if ( a.text == csvreader.s3label) 
         {
             //Invoke("SceneChange", 0.5f);
             SceneChange();
         }
-            
+        else
+        {
+            SceneChange2();
+        }
         //if (rnd2 == 3)//もしselect3だったら
         //{
         //    Invoke("SceneChange", 0.5f);
@@ -50,12 +56,12 @@ public class judgementButton : MonoBehaviour
     public void SceneChange()
     {
         //シーン名をここに入力
-        SceneManager.LoadScene("Stage3 qestion");//正解へ
+        SceneManager.LoadScene("Stage3 right");//正解へ
     }
 
     public void SceneChange2()
     {
         //シーン名をここに入力
-        SceneManager.LoadScene("Stage3 interval");//不正解へ
+        SceneManager.LoadScene("Stage3 qestion");//不正解へ
     }
 }
