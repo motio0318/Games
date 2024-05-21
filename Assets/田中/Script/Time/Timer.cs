@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
         {
 
             //ƒV[ƒ“–¼‚ğ‚±‚±‚É“ü—Í
-            SceneManager.LoadScene("clear");
+            SceneManager.LoadScene("Stage3 right");
 
 
         }

@@ -32,14 +32,17 @@ public class HP: MonoBehaviour
     void Update()
     {
 
+           
 
         // スペースキーが押されたかどうかを検出
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            //現在のHPからダメージを引く
             currentHp = currentHp - damage;
+            //現在のHPからダメージを引く
             slider.value = currentHp / (float)maxHp;
+
+
             // currentHpの保存
             PlayerPrefs.SetInt("currentHp", currentHp);
 
@@ -53,9 +56,19 @@ public class HP: MonoBehaviour
         if(currentHp <= 0)
         {
             Destroy(gameObject);
+
+            //シーン名をここに入力
+            SceneManager.LoadScene("clear");
+
         }
 
+        Invoke("ChangeScene_Interval", 5);
 
+
+    }
+    void ChangeScene_Interval()
+    {
+        SceneManager.LoadScene("Stage3 interval");
     }
 
 }
