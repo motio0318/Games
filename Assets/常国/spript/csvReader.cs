@@ -3,19 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;//UI オブジェクトを扱う時は必須
 using System.IO;　//追加
+using System.Linq;
+using System;
 
 public class csvReader : MonoBehaviour
 {
     private TextAsset csvFile; // CSVファイル
     private List<string[]> csvData = new List<string[]>(); // CSVファイルの中身を入れるリスト
 
-    public string s3label ;
+    public string s3label;
     public int rnd;
+
+    //int Qstart = 1;
+    //int Qend = 21;
+    //int Qransu;
+    //int Qcount = 1;//問題出す回数
+
+    List<int> Qnumbers = new List<int>();
+
+    int[] Anser = new int[4] { 1, 2, 3, 4 };
 
     void Start()
     {
-        rnd = Random.Range(1, 21);
-        //int rnd2 = Random.Range(1, 5);
+        rnd = UnityEngine.Random.Range(1, 21);
+
+        //クエスチョンの乱数(決めた回数だけ出す)
+        //for (int i = Qstart; i <= Qend; i++)
+        //{
+        //    Qnumbers.Add(i);
+        //}
+        //while (Qcount-- > 0)
+        //{
+        //    int index2 = Random.Range(0, Qnumbers.Count);
+        //    Qransu = Qnumbers[index2];
+        //    Qnumbers.RemoveAt(index2);
+        //}
+
+        
 
         Randam();
     }
@@ -46,34 +70,45 @@ public class csvReader : MonoBehaviour
         }
 
 
-        for (int i = 0; i < csvData.Count; i++) // csvDataリストの条件を満たす値の数（全て）
-        {
-            // データの表示
-            //Debug.Log(csvData[i][0]);
-          //  Debug.Log(csvData[i][1]);
-           // Debug.Log(csvData[i][2]);
-           // Debug.Log(csvData[i][3]);
-           // Debug.Log(csvData[i][4]);
+        //データの表示
+        //Debug.Log(csvData[i][0]);
+        //  Debug.Log(csvData[i][1]);
+        // Debug.Log(csvData[i][2]);
+        // Debug.Log(csvData[i][3]);
+        // Debug.Log(csvData[i][4]);
 
-            //特定の名前のオブジェクトを検索してアクセス
-            Text qLabel  = GameObject.Find("question").GetComponentInChildren<Text>();
-            Text s1Label = GameObject.Find("select1").GetComponentInChildren<Text>();
-            Text s2Label = GameObject.Find("select2").GetComponentInChildren<Text>();
-            Text s3Label = GameObject.Find("select3").GetComponentInChildren<Text>();
-            Text s4Label = GameObject.Find("select4").GetComponentInChildren<Text>();
-            //データをセットすることで、既存情報を上書きできる
+        //回答欄のシャッフル
+        System.Random random = new System.Random();
+        Anser = Anser.OrderBy(x => random.Next()).ToArray();
 
-            qLabel.text = csvData[rnd][0];//rndでランダムに1～20問出題
+        //特定の名前のオブジェクトを検索してアクセス
+        Text qLabel  = GameObject.Find("question").GetComponentInChildren<Text>();
+        Text s1Label = GameObject.Find("select1").GetComponentInChildren<Text>();
+        Text s2Label = GameObject.Find("select2").GetComponentInChildren<Text>();
+        Text s3Label = GameObject.Find("select3").GetComponentInChildren<Text>();
+        Text s4Label = GameObject.Find("select4").GetComponentInChildren<Text>();
 
-            s1Label.text = csvData[rnd][1];
-            s2Label.text = csvData[rnd][2];
-            s3Label.text = csvData[rnd][3];
-            s4Label.text = csvData[rnd][4];
 
-            Debug.Log(rnd);
+        s1Label.text = csvData[rnd/*Qransu*/][1];
+        s2Label.text = csvData[rnd/*Qransu*/][2];
+        s3Label.text = csvData[rnd/*Qransu*/][3];
+        s4Label.text = csvData[rnd/*Qransu*/][4];
 
-            s3label = s3Label.text;
-        }
+        //データをセットすることで、既存情報を上書きできる
+
+        s3label = s3Label.text;
         Debug.Log(s3label);
+
+        //System.Random random = new System.Random();
+        //Anser = Anser.OrderBy(x => random.Next()).ToArray();
+
+        qLabel.text = csvData[rnd/*Qransu*/][0];//rndでランダムに1～20問出題
+
+        s1Label.text = csvData[rnd/*Qransu*/][Anser[0]];
+        s2Label.text = csvData[rnd/*Qransu*/][Anser[1]];
+        s3Label.text = csvData[rnd/*Qransu*/][Anser[2]];
+        s4Label.text = csvData[rnd/*Qransu*/][Anser[3]];
+
+       // Debug.Log(s3label);
     }
 }

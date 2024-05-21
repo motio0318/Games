@@ -35,22 +35,12 @@ public class judgementButton : MonoBehaviour
         //Debug.Log(csvreader.s3label);
         if ( a.text == csvreader.s3label) 
         {
-            //Invoke("SceneChange", 0.5f);
             SceneChange();
         }
         else
         {
             SceneChange2();
         }
-        //if (rnd2 == 3)//‚à‚µselect3‚¾‚Á‚½‚ç
-        //{
-        //    Invoke("SceneChange", 0.5f);
-        //}
-
-        //else if (rnd2 != 3)//‚à‚µselect1‚¾‚Á‚½‚ç,‚à‚µselect2‚¾‚Á‚½‚ç,‚à‚µselect4‚¾‚Á‚½‚ç)
-        //{
-        //    Invoke("SceneChange2", 0.5f);
-        //}
     }
 
     public void SceneChange()
