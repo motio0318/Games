@@ -62,9 +62,14 @@ public class HP: MonoBehaviour
 
         }
 
+        Invoke("ChangeScene_Interval", 5);
+
 
     }
-
+    void ChangeScene_Interval()
+    {
+        SceneManager.LoadScene("Stage3 interval");
+    }
 
 }
 

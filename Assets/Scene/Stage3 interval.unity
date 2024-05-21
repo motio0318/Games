@@ -754,6 +754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1933878658}
   - component: {fileID: 1933878659}
+  - component: {fileID: 1933878660}
   m_Layer: 5
   m_Name: LoadBar
   m_TagString: Untagged
@@ -828,12 +829,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 13
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1933878660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933878657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9785f65f0078e847853eb21986e6097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Max: 10
 --- !u!1 &2112307429
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +857,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112307431}
-  - component: {fileID: 2112307430}
   m_Layer: 0
   m_Name: HPBarCtrl
   m_TagString: Untagged
@@ -851,18 +864,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2112307430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112307429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9785f65f0078e847853eb21986e6097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2112307431
 Transform:
   m_ObjectHideFlags: 0

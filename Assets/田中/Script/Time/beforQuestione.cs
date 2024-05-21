@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement; // 忘れない！！
 
 public class beforQuestione : MonoBehaviour
 {
+    public float Max = 10;
     Slider _slider;
     void Start()
     {
@@ -19,14 +20,14 @@ public class beforQuestione : MonoBehaviour
     {
         // HP上昇
         _hp += 0.01f;
-        if (_hp > 16)
+        if (_hp > Max)
         {
             // 最大を超えたら0に戻す
-            //_hp = 0;
+            _hp = 0;
 
 
             //シーン名をここに入力
-            SceneManager.LoadScene("Stage3 interval");
+            SceneManager.LoadScene("Stage3 qestion");
 
         }
 
