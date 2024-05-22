@@ -7,6 +7,6 @@ public class changeScene : MonoBehaviour
 {
    public void change_button()
     {
-        SceneManager.LoadScene("Stage3 qestion");
+        SceneManager.LoadScene("Stage3 interval");
     }
 }

@@ -25,7 +25,7 @@ public class csvReader : MonoBehaviour
 
     void Start()
     {
-        rnd = UnityEngine.Random.Range(1, 21);
+        rnd = UnityEngine.Random.Range(1, 101);
 
         //クエスチョンの乱数(決めた回数だけ出す)
         //for (int i = Qstart; i <= Qend; i++)

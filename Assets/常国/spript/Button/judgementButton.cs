@@ -52,6 +52,6 @@ public class judgementButton : MonoBehaviour
     public void SceneChange2()
     {
         //シーン名をここに入力
-        SceneManager.LoadScene("Stage3 qestion");//不正解へ
+        SceneManager.LoadScene("Stage3misstake");//不正解へ
     }
 }
