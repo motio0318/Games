@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     //インスペクターウィンドウからゲームオブジェクトを設定する
     [SerializeField] GameObject Panel1;
     [SerializeField] GameObject Panel2;
+    [SerializeField] GameObject Panel3;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +28,16 @@ public class UIManager : MonoBehaviour
         Panel2.SetActive(true);
     }
 
+    public void SelectDescriptio()
+    {
+        Panel3.SetActive(true);
+    }
+
+
     public void BackToMenu()
     {
         Panel1.SetActive(false);
         Panel2.SetActive(false);
+        Panel3.SetActive(false);
     }
 }
