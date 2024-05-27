@@ -9,8 +9,8 @@ using UnityEngine.UI;
 public class HP: MonoBehaviour
 {
     //最大HPと現在のHP。
-    int maxHp = 20;
-    int currentHp;
+    int maxHp = 15;
+    public static int currentHp;
     int damage = 1;
 
     //Sliderを入れる
@@ -25,8 +25,9 @@ public class HP: MonoBehaviour
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
 
+        // currentHpの読み込みする時にこのコードを描く
+       currentHp = PlayerPrefs.GetInt("currentHp", 0);
 
-        //Debug.Log("Start currentHp : " + currentHp);
     }
 
     void Update()
@@ -43,13 +44,12 @@ public class HP: MonoBehaviour
             slider.value = currentHp / (float)maxHp;
 
 
+
             // currentHpの保存
             PlayerPrefs.SetInt("currentHp", currentHp);
 
+            
 
-
-            // currentHpの読み込みする時にこのコードを描く
-            //int currentHp = PlayerPrefs.GetInt("currentHp", 0);
 
         }
 
@@ -60,6 +60,9 @@ public class HP: MonoBehaviour
             //シーン名をここに入力
             SceneManager.LoadScene("clear");
 
+            PlayerPrefs.DeleteKey("currentHp");
+
+            Debug.Log(currentHp);
         }
 
         Invoke("ChangeScene_Interval", 5);
@@ -68,6 +71,7 @@ public class HP: MonoBehaviour
     }
     void ChangeScene_Interval()
     {
+
         SceneManager.LoadScene("Stage3 interval");
     }
 
