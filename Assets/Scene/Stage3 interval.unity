@@ -575,8 +575,9 @@ GameObject:
   - component: {fileID: 1356594488}
   - component: {fileID: 1356594490}
   - component: {fileID: 1356594489}
+  - component: {fileID: 1356594491}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Qcount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -644,6 +645,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356594487}
   m_CullTransparentMesh: 1
+--- !u!114 &1356594491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356594487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fecc2208872b46449794e8df3b9c14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VarTwxt: {fileID: 1356594489}
 --- !u!1 &1473231762
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Max: 10
+  count: 0
 --- !u!1 &2112307429
 GameObject:
   m_ObjectHideFlags: 0
