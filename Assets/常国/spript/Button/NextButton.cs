@@ -8,6 +8,8 @@ public class NextButton : MonoBehaviour
     [SerializeField, Header("Œˆ’è‰¹")]
     private GameObject submitSE;
 
+    public static bool cnt = false;
+
     public void OnClick()
     {
         Instantiate(submitSE);
@@ -18,7 +20,7 @@ public class NextButton : MonoBehaviour
     public void SceneChange()
     {
 
-
+        cnt = true;
         //ƒV[ƒ“–¼‚ğ‚±‚±‚É“ü—Í
         SceneManager.LoadScene("Stage1");
     }

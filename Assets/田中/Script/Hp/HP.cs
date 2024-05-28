@@ -10,7 +10,7 @@ public class HP: MonoBehaviour
 {
     //最大HPと現在のHP。
     int maxHp = 15;
-    public static int currentHp;
+    int currentHp;
     int damage = 1;
 
     //Sliderを入れる
@@ -25,31 +25,22 @@ public class HP: MonoBehaviour
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
 
-        // currentHpの読み込みする時にこのコードを描く
-       currentHp = PlayerPrefs.GetInt("currentHp", 0);
 
     }
 
     void Update()
     {
-
+        NextButton nextButton = GetComponent<NextButton>();
            
 
-        // スペースキーが押されたかどうかを検出
-        if (Input.GetKeyDown(KeyCode.Space))
+        // NextButttonが押されたかどうかを検出
+        if (NextButton.cnt == true)
         {
 
             currentHp = currentHp - damage;
             //現在のHPからダメージを引く
             slider.value = currentHp / (float)maxHp;
-
-
-
-            // currentHpの保存
-            PlayerPrefs.SetInt("currentHp", currentHp);
-
-            
-
+            NextButton.cnt = false;
 
         }
 
@@ -59,8 +50,6 @@ public class HP: MonoBehaviour
 
             //シーン名をここに入力
             SceneManager.LoadScene("clear");
-
-            PlayerPrefs.DeleteKey("currentHp");
 
             Debug.Log(currentHp);
         }
