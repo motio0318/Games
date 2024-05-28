@@ -5,8 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class changeScene : MonoBehaviour
 {
-   public void change_button()
+    public int Q_count = 0;
+    private void Awake()
     {
-        SceneManager.LoadScene("Stage3 qestion");
+        //何問目か取得する
+        Q_count = PlayerPrefs.GetInt("count", 0);
+    }
+
+    public void change_button()
+    {
+        if (Q_count == 3)
+        {
+            TitleSceneChange();
+        }
+        else
+        {
+            Invoke("SceneChange", 0.5f);
+        }
+    }
+
+    public void TitleSceneChange()
+    {
+        //シーン名をここに入力
+        SceneManager.LoadScene("Title");
+    }
+    public void SceneChange()
+    {
+        //シーン名をここに入力
+        SceneManager.LoadScene("Stage3 interval");
     }
 }

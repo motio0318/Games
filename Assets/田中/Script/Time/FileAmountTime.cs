@@ -5,7 +5,7 @@ public class FileAmountTime : MonoBehaviour
 {
     public Image UIobj;
     public bool roop;
-    public float countTime = 15.0f;
+    public float countTime = 10.0f;
 
 
     // Update is called once per frame

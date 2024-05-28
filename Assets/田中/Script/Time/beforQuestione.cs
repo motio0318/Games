@@ -7,12 +7,33 @@ using UnityEngine.SceneManagement; // 忘れない！！
 
 public class beforQuestione : MonoBehaviour
 {
+    public static beforQuestione i_beforQuestione;
+
+    public void Awake()
+    {
+        if (i_beforQuestione == null)
+        {
+            i_beforQuestione = this;
+        }
+    }
+
     public float Max = 10;
     Slider _slider;
+    public int count = 0;
+
     void Start()
     {
+        //DontDestroyOnLoad(this);
+
         // スライダーを取得する
         _slider = GameObject.Find("LoadBar").GetComponent<Slider>();
+
+        count = PlayerPrefs.GetInt("count", 0);
+        count += 1;//何問目か
+
+        PlayerPrefs.SetInt("count", count);//保存
+
+        //Debug.Log(count);
     }
 
     float _hp = 0;
@@ -29,9 +50,10 @@ public class beforQuestione : MonoBehaviour
             //シーン名をここに入力
             SceneManager.LoadScene("Stage3 qestion");
 
+          
         }
-
         // HPゲージに値を設定
         _slider.value = _hp;
+        //Debug.Log(count);
     }
 }

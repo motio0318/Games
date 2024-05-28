@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement; // 忘れない！！
 
 public class Timer : MonoBehaviour
 {
-    public float Rimmit = 15;
+    public float Rimmit = 10;
 
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
         {
 
             //シーン名をここに入力
-            SceneManager.LoadScene("Stage3 right");
+            SceneManager.LoadScene("Stage3misstake");
 
 
         }

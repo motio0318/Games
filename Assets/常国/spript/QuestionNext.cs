@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement; // –Y‚ê‚È‚¢II
 
 public class QuestionNext : MonoBehaviour
 {
-    [SerializeField, Header("o‘è‰¹")]
-    private GameObject submitSE;
-
     private void Start()
     {
-        Instantiate(submitSE);
 
         Invoke("SceneChange", 5.0f);
     }
