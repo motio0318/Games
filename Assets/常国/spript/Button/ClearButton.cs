@@ -12,9 +12,6 @@ public class ClearButton : MonoBehaviour
 
     void Start()
     {
-        
-        Count = beforQuestione.i_beforQuestione.count;
-        Count = 0;
 
         OnClick();
     }

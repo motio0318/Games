@@ -8,6 +8,11 @@ public class TitleStartButton : MonoBehaviour
     [SerializeField, Header("Œˆ’è‰¹")]
     private GameObject submitSE;
 
+    private void Awake()
+    {
+        PlayerPrefs.SetInt("count", 0);//•Û‘¶
+    }
+
     public void OnClick()
     {
         Instantiate(submitSE);

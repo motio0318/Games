@@ -5,6 +5,7 @@ using UnityEngine.UI;//UI オブジェクトを扱う時は必須
 using System.IO;　//追加
 using System.Linq;
 using System;
+using UnityEngine.SceneManagement; // 忘れない！！
 
 public class csvReader : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class csvReader : MonoBehaviour
 
     public string s3label;
     public int rnd;
+
 
     //int Qstart = 1;
     //int Qend = 21;
@@ -39,7 +41,7 @@ public class csvReader : MonoBehaviour
         //    Qnumbers.RemoveAt(index2);
         //}
 
-        
+       
 
         Randam();
     }
@@ -52,6 +54,12 @@ public class csvReader : MonoBehaviour
         {
             instance = this;
         }
+    }
+
+    public void SceneChange()
+    {
+        //シーン名をここに入力
+        SceneManager.LoadScene("Title");
     }
 
     public void Randam()

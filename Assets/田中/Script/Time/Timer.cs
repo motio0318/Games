@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement; // ñYÇÍÇ»Ç¢ÅIÅI
 
 public class Timer : MonoBehaviour
 {
-    public float Rimmit = 15;
+    public float Rimmit = 10;
 
 
     // Start is called before the first frame update
