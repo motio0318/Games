@@ -10,7 +10,7 @@ public class TitleStartButton : MonoBehaviour
 
     public void Awake()
     {
-        
+        PlayerPrefs.SetInt("slider.value", 0);
 
     }
 

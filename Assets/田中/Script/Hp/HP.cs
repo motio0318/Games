@@ -25,10 +25,11 @@ public class HP: MonoBehaviour
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
 
-
+        PlayerPrefs.GetInt("currentHp",0);
+        HP_herasu();
     }
 
-    void Update()
+    void HP_herasu()
     {
         NextButton nextButton = GetComponent<NextButton>();
            
@@ -41,6 +42,8 @@ public class HP: MonoBehaviour
             //現在のHPからダメージを引く
             slider.value = currentHp / (float)maxHp;
             NextButton.cnt = false;
+
+            PlayerPrefs.SetInt("currentHp",currentHp);
 
         }
 
