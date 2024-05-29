@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class changeScene : MonoBehaviour
 {
     public int Q_count = 0;
+    //public static int
     private void Awake()
     {
         //‰½–â–Ú‚©Žæ“¾‚·‚é

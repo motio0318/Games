@@ -9,12 +9,22 @@ using UnityEngine.UI;
 public class HP: MonoBehaviour
 {
     //Å‘åHP‚ÆŒ»İ‚ÌHPB
-    int maxHp = 15;
+    int maxHp = 10;
     int currentHp;
     int damage = 1;
 
     //Slider‚ğ“ü‚ê‚é
     public Slider slider;
+
+    public static HP i_HP;
+
+    public void Awake()
+    {
+        if (i_HP == null)
+        {
+            i_HP = this;
+        }
+    }
 
     void Start()
     {
@@ -25,7 +35,7 @@ public class HP: MonoBehaviour
         //Œ»İ‚ÌHP‚ğÅ‘åHP‚Æ“¯‚¶‚ÉB
         currentHp = maxHp;
 
-        PlayerPrefs.GetInt("currentHp",0);
+        currentHp = PlayerPrefs.GetInt("currentHp",0);
         HP_herasu();
     }
 

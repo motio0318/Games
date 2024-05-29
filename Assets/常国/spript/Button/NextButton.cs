@@ -10,11 +10,33 @@ public class NextButton : MonoBehaviour
 
     public static bool cnt = false;
 
+    public int Q_count = 0;
+
+    private void Awake()
+    {
+        //‰½–â–Ú‚©Žæ“¾‚·‚é
+        Q_count = PlayerPrefs.GetInt("count", 0);
+    }
+
     public void OnClick()
     {
         Instantiate(submitSE);
 
-        Invoke("SceneChange", 0.5f);
+        //3–â–Ú‚È‚çƒ^ƒCƒgƒ‹‚Ö(‰¼)
+        if(Q_count == 3)
+        {
+            TitleSceneChange();
+        }
+        else
+        {
+            Invoke("SceneChange", 0.5f);
+        }
+       
+    }
+
+    public void TitleSceneChange()
+    {
+        SceneManager.LoadScene("Title");
     }
 
     public void SceneChange()

@@ -11,6 +11,7 @@ public class TitleStartButton : MonoBehaviour
     private void Awake()
     {
         PlayerPrefs.SetInt("count", 0);//•Û‘¶
+        PlayerPrefs.SetInt("currentHp", 10);//•Û‘¶
     }
 
     public void OnClick()
