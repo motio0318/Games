@@ -12,6 +12,7 @@ public class TitleStartButton : MonoBehaviour
     {
         PlayerPrefs.SetInt("count", 0);//•Û‘¶
         PlayerPrefs.SetInt("currentHp", 10);//•Û‘¶
+        PlayerPrefs.SetInt("P_Hp", 3);//•Û‘¶
     }
 
     public void OnClick()

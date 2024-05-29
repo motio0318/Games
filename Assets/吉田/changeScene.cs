@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class changeScene : MonoBehaviour
 {
     public int Q_count = 0;
+    public static bool cnt2 = false;
     //public static int
     private void Awake()
     {
@@ -32,7 +33,8 @@ public class changeScene : MonoBehaviour
     }
     public void SceneChange()
     {
+        cnt2 = true;
         //ƒV[ƒ“–¼‚ğ‚±‚±‚É“ü—Í
-        SceneManager.LoadScene("Stage3 interval");
+        SceneManager.LoadScene("Stage1");
     }
 }
