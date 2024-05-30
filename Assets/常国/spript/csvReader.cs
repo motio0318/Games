@@ -14,34 +14,38 @@ public class csvReader : MonoBehaviour
 
     public string s3label;
     public int rnd;
-
-
-    //int Qstart = 1;
-    //int Qend = 21;
-    //int Qransu;
-    //int Qcount = 1;//問題出す回数
+    public int R_cnt = 0;
 
     List<int> Qnumbers = new List<int>();
 
     int[] Anser = new int[4] { 1, 2, 3, 4 };
+    int[] Question = new int[100];
+
+    int start = 1;
+    int end = 100;
+    int R_count = 1;
+    public int ransu = 0;
 
     void Start()
     {
+        //1～１００をランダムで一つ取得
         rnd = UnityEngine.Random.Range(1, 101);
 
-        //クエスチョンの乱数(決めた回数だけ出す)
-        //for (int i = Qstart; i <= Qend; i++)
-        //{
-        //    Qnumbers.Add(i);
-        //}
-        //while (Qcount-- > 0)
-        //{
-        //    int index2 = Random.Range(0, Qnumbers.Count);
-        //    Qransu = Qnumbers[index2];
-        //    Qnumbers.RemoveAt(index2);
-        //}
+        //重複させない
+        for(int i = start; i <= end; i++)
+        {
+            Qnumbers.Add(i);
+        }
+        while(R_count -- > 0)
+        {
+            int index = Randam.Range(0, Qnumbers.Count);
 
-       
+            ransu = Qnumbers[index];
+
+            Debug.Log(ransu);
+
+            Qnumbers.RemoveAt(index);
+        }
 
         Randam();
     }
@@ -106,9 +110,6 @@ public class csvReader : MonoBehaviour
 
         s3label = s3Label.text;
         Debug.Log(s3label);
-
-        //System.Random random = new System.Random();
-        //Anser = Anser.OrderBy(x => random.Next()).ToArray();
 
         qLabel.text = csvData[rnd/*Qransu*/][0];//rndでランダムに1～20問出題
 

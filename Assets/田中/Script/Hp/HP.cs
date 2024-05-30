@@ -37,6 +37,7 @@ public class HP: MonoBehaviour
 
         //•Û‘¶‚³‚ê‚Ä‚¢‚é“G‚ÌHP‚ðŽæ“¾
         currentHp = PlayerPrefs.GetInt("currentHp",0);
+        slider.value = currentHp / (float)maxHp;
 
         HP_herasu();
     }
