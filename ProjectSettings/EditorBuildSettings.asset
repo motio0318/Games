@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Describe.unity
     guid: c5e5f0dfab66f9141984a7695c35ea8e
+  - enabled: 1
+    path: Assets/Scene/Stage3 mistake.unity
+    guid: 82aeee870e687e04eb1c9892eaad8eae
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
