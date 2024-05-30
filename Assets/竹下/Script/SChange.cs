@@ -11,10 +11,10 @@ public class SChange : MonoBehaviour
         SceneManager.LoadScene("Title");
     }
 
-    public void Explanation1()
+    public void Describe()
     {
         //ƒV[ƒ“–¼‚ğ‚±‚±‚É“ü—Í
-        SceneManager.LoadScene("Explanation1");
+        SceneManager.LoadScene("Describe");
     }
 
     public void Explanation2()

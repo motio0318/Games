@@ -7,9 +7,14 @@ public class UIManager : MonoBehaviour
 {
     //2つのPanelを格納する変数
     //インスペクターウィンドウからゲームオブジェクトを設定する
+    [SerializeField] GameObject MainPanel1;
+    [SerializeField] GameObject MainPanel2;
+
     [SerializeField] GameObject Panel1;
     [SerializeField] GameObject Panel2;
     [SerializeField] GameObject Panel3;
+    [SerializeField] GameObject Panel4;
+    [SerializeField] GameObject Panel5;
 
     // Start is called before the first frame update
     void Start()
@@ -18,20 +23,45 @@ public class UIManager : MonoBehaviour
         BackToMenu();
     }
 
-    public void SelectXrHubDescription()
+    public void Main1()
+    {
+        MainPanel1.SetActive(true);
+        MainPanel2.SetActive(false);
+    }
+
+    public void Main2()
+    {
+        MainPanel2.SetActive(true);
+        MainPanel1.SetActive(false);
+
+    }
+
+    public void Quiz()
     {
         Panel1.SetActive(true);
     }
 
-    public void SelectUnityDescriptio()
+    public void Answer()
     {
         Panel2.SetActive(true);
     }
 
-    public void SelectDescriptio()
+    public void Heart()
     {
         Panel3.SetActive(true);
     }
+
+    public void Timer()
+    {
+        Panel4.SetActive(true);
+    }
+
+    public void enemy()
+    {
+        Panel5.SetActive(true);
+    }
+
+
 
 
     public void BackToMenu()
@@ -39,5 +69,7 @@ public class UIManager : MonoBehaviour
         Panel1.SetActive(false);
         Panel2.SetActive(false);
         Panel3.SetActive(false);
+        Panel4.SetActive(false);
+        Panel5.SetActive(false);
     }
 }
