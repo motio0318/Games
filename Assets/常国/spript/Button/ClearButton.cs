@@ -1,32 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // 忘れない！！
+using UnityEngine.SceneManagement; // シーン切り替えするときは忘れない！！
 
 public class ClearButton : MonoBehaviour
 {
     [SerializeField, Header("決定音")]
     private GameObject submitSE;
 
-    public int Count = 0;
-
-    void Start()
-    {
-
-        OnClick();
-    }
+    //ボタンが押されたら
     public void OnClick()
     {
+        //SE鳴らす
         Instantiate(submitSE);
 
-        Invoke("SceneChange", 0.5f);
+        //10秒後に呼び出し
+        Invoke("SceneChange", 10);
     }
 
     public void SceneChange()
     {
-        //シーン名をここに入力
+        //タイトルシーンへ
         SceneManager.LoadScene("Title");
     }
-
 }
 

@@ -23,17 +23,17 @@ public class beforQuestione : MonoBehaviour
 
     void Start()
     {
-        //DontDestroyOnLoad(this);
-
         // スライダーを取得する
         _slider = GameObject.Find("LoadBar").GetComponent<Slider>();
 
+        //保存されている何問目かを取得
         count = PlayerPrefs.GetInt("count", 0);
-        count += 1;//何問目か
 
-        PlayerPrefs.SetInt("count", count);//保存
+        //何問目かを1ずつ増やす
+        count += 1;
 
-        //Debug.Log(count);
+        //何問目かを保存
+        PlayerPrefs.SetInt("count", count);
     }
 
     float _hp = 0;
@@ -54,6 +54,5 @@ public class beforQuestione : MonoBehaviour
         }
         // HPゲージに値を設定
         _slider.value = _hp;
-        //Debug.Log(count);
     }
 }

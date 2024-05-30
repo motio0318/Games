@@ -22,28 +22,19 @@ public class NextButton : MonoBehaviour
     {
         Instantiate(submitSE);
 
-        //3問目ならタイトルへ(仮)
-        if(Q_count == 3)
-        {
-            TitleSceneChange();
-        }
-        else
-        {
-            Invoke("SceneChange", 0.5f);
-        }
-       
+        Invoke("SceneChange", 0.5f);
+
     }
 
-    public void TitleSceneChange()
-    {
-        SceneManager.LoadScene("Title");
-    }
+    //public void TitleSceneChange()
+    //{
+    //    SceneManager.LoadScene("Title");
+    //}
 
     public void SceneChange()
     {
-
         cnt = true;
-        //シーン名をここに入力
+        //敵シーンへ
         SceneManager.LoadScene("Stage1");
     }
 
