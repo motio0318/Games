@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject Panel1;
     [SerializeField] GameObject Panel2;
     [SerializeField] GameObject Panel3;
+    [SerializeField] GameObject Panel4;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +29,16 @@ public class UIManager : MonoBehaviour
         Panel2.SetActive(true);
     }
 
-    public void SelectDescriptio()
+    public void Heart()
     {
         Panel3.SetActive(true);
     }
+
+    public void Timer()
+    {
+        Panel3.SetActive(true);
+    }
+
 
 
     public void BackToMenu()
@@ -39,5 +46,6 @@ public class UIManager : MonoBehaviour
         Panel1.SetActive(false);
         Panel2.SetActive(false);
         Panel3.SetActive(false);
+        Panel4.SetActive(false);
     }
 }
