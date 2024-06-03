@@ -33,8 +33,9 @@ public class changeScene : MonoBehaviour
     }
     public void SceneChange()
     {
-        cnt2 = true;
         //ƒV[ƒ“–¼‚ğ‚±‚±‚É“ü—Í
         SceneManager.LoadScene("Stage1");
+        cnt2 = true;
+
     }
 }
