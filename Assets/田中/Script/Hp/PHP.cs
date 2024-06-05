@@ -47,6 +47,7 @@ public class PHP : MonoBehaviour
             if (P_Hp == 2)
             {
                 PlayerPrefs.SetInt("P_Hp", P_Hp);
+                changeScene.cnt2 = false;
                 this.obj1.SetActive(false);
 
 
@@ -58,6 +59,7 @@ public class PHP : MonoBehaviour
                 //HP‚R‚ðŒ¸‚ç‚·
 
                 changeScene.cnt2 = false;
+                this.obj1.SetActive(false);
                 this.obj2.SetActive(false);
 
 
@@ -65,6 +67,8 @@ public class PHP : MonoBehaviour
             else if (P_Hp == 0)
             {
                 changeScene.cnt2 = false;
+                this.obj1.SetActive(false);
+                this.obj2.SetActive(false);
                 this.obj3.SetActive(false);
 
 

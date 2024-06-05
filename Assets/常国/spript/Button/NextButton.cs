@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // 忘れない！！
 
-public class NextButton : MonoBehaviour
+public class NextButton : PHP
 {
     [SerializeField, Header("決定音")]
     private GameObject submitSE;
@@ -22,16 +22,38 @@ public class NextButton : MonoBehaviour
     {
         Instantiate(submitSE);
 
-        //3問目ならタイトルへ(仮)
-        if(Q_count == 3)
+
+
+        if (PHP.P_Hp == 2)
         {
-            TitleSceneChange();
+            changeScene.cnt2 = false;
+            this.obj1.SetActive(false);
+
+
         }
-        else
+
+        if (PHP.P_Hp == 1)
         {
-            Invoke("SceneChange", 0.5f);
+
+            //HP３を減らす
+
+            changeScene.cnt2 = false;
+            this.obj1.SetActive(false);
+            this.obj2.SetActive(false);
+
+
         }
-       
+        Invoke("SceneChange", 0.5f);
+        ////3問目ならタイトルへ(仮)
+        //if (Q_count == 3)
+        //{
+        //    TitleSceneChange();
+        //}
+        //else
+        //{
+        //    Invoke("SceneChange", 0.5f);
+        //}
+
     }
 
     public void TitleSceneChange()

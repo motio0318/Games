@@ -105,7 +105,7 @@ public class csvReader : MonoBehaviour
         //データをセットすることで、既存情報を上書きできる
 
         s3label = s3Label.text;
-        Debug.Log(s3label);
+        //Debug.Log(s3label);
 
         //System.Random random = new System.Random();
         //Anser = Anser.OrderBy(x => random.Next()).ToArray();

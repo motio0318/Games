@@ -354,6 +354,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32b4f3c9e8c67c42a40019e07fb9949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P_HP_herasu: 1
+  obj1: {fileID: 7305333051922343284, guid: 7b777eb2df50e84449aecf1118ce6ffb, type: 3}
+  obj2: {fileID: 786090020085990476, guid: b10e2206f029c5743b8a5aa64f6d1ae1, type: 3}
+  obj3: {fileID: 9157122630553467699, guid: 6f92ab162de7ff5488853c279cfe28a8, type: 3}
   submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
   Q_count: 0
 --- !u!1 &387409626
