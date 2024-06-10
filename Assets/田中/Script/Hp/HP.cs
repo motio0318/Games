@@ -10,7 +10,7 @@ public class HP: MonoBehaviour
 {
     //最大HPと現在のHP。
     int maxHp = 10;
-    int currentHp;
+    public int currentHp;
     int damage = 1;
 
     //Sliderを入れる
@@ -35,6 +35,7 @@ public class HP: MonoBehaviour
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
 
+        //保存されている敵のHPを取得
         currentHp = PlayerPrefs.GetInt("currentHp",0);
         slider.value = currentHp / (float)maxHp;
 
@@ -43,80 +44,47 @@ public class HP: MonoBehaviour
 
     void HP_herasu()
     {
+        //NextButtonを取得
         NextButton nextButton = GetComponent<NextButton>();
            
 
         // NextButttonが押されたかどうかを検出
         if (NextButton.cnt == true)
         {
-
-            currentHp = currentHp - damage;
             //現在のHPからダメージを引く
+            currentHp = currentHp - damage;
             slider.value = currentHp / (float)maxHp;
             NextButton.cnt = false;
 
+            //敵のHPを保存
             PlayerPrefs.SetInt("currentHp",currentHp);
 
         }
 
+        //もし敵のHPが0になったら
         if(currentHp <= 0)
         {
+            //敵とHPを消す
             Destroy(gameObject);
 
-            //シーン名をここに入力
-            SceneManager.LoadScene("clear");
-
+            //7秒後に呼び出し
+            Invoke("ChangeScene_clear", 7);
             Debug.Log(currentHp);
         }
-
+        //5秒後に呼び出し
         Invoke("ChangeScene_Interval", 5);
 
 
     }
     void ChangeScene_Interval()
     {
-
+        //第何問シーンへ
         SceneManager.LoadScene("Stage3 interval");
     }
 
+    void ChangeScene_clear()
+    {
+        //クリアシーンへ
+        SceneManager.LoadScene("clear");
+    }
 }
-
-
-
-
-
-
-
-//public class HP : MonoBehaviour
-//{
-//    public Slider hpGauge;   //残りHPゲージ
-//    public TextMeshProUGUI hpText;  //残りHPを表示するテキスト
-//    float hpEnemy; // 敵HP
-
-//    void Start()
-//    {
-//        hpGauge.value = 1f; // HPゲージの初期値を設定
-//        hpEnemy = 30f; // 初期の敵HPを設定
-//        enemyPoint(); // HPテキストを更新
-//    }
-
-//    void Update()
-//    {
-//        // スペースキーが押されたかどうかを検出
-//        if (Input.GetKeyDown(KeyCode.Space))
-//        {
-//            float attack = Random.Range(0f, 10f); // 0から10までの攻撃
-//            hpEnemy -= attack;      // 敵のHPをランダムで減少させる
-//            Debug.Log("攻撃力:" + attack);
-//            Debug.Log("敵HP" + hpEnemy);
-//            hpGauge.value = hpEnemy / 30f;  // ゲージの値を更新
-//            hpEnemy = Mathf.Max(hpEnemy, 0f); // HPが0未満にならないように調整
-//            enemyPoint();   // HPテキストを更新
-//        }
-//    }
-//    void enemyPoint()
-//    {
-//        hpText.text = hpEnemy.ToString("F1");   // 敵HPをテキストとして表示
-//    }
-
-//}

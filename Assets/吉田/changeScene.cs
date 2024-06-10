@@ -16,25 +16,19 @@ public class changeScene : MonoBehaviour
 
     public void change_button()
     {
-        if (Q_count == 3)
-        {
-            TitleSceneChange();
-        }
-        else
-        {
-            Invoke("SceneChange", 0.5f);
-        }
+       //押されてから0.5秒後に呼び出し
+       Invoke("SceneChange", 0.5f);
     }
 
-    public void TitleSceneChange()
-    {
-        //シーン名をここに入力
-        SceneManager.LoadScene("Title");
-    }
+    //public void TitleSceneChange()
+    //{
+    //    //シーン名をここに入力
+    //    SceneManager.LoadScene("Title");
+    //}
     public void SceneChange()
     {
         cnt2 = true;
-        //シーン名をここに入力
+        //敵のシーンへ
         SceneManager.LoadScene("Stage1");
     }
 }

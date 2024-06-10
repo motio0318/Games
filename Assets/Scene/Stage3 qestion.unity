@@ -1217,6 +1217,411 @@ MonoBehaviour:
     select2: 
     select3: 
     select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
+  - question: 
+    select1: 
+    select2: 
+    select3: 
+    select4: 
 --- !u!114 &1188344370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,6 +1636,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s3label: 
   rnd: 0
+  R_cnt: 0
+  list_onedake: 0
+  numbers: 
+  ransu: 0
 --- !u!1 &1199924821
 GameObject:
   m_ObjectHideFlags: 0
