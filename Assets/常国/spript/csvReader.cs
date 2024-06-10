@@ -15,39 +15,48 @@ public class csvReader : MonoBehaviour
     public string s3label;
     public int rnd;
     public int R_cnt = 0;
+    public int list_onedake = 0;
+    public int List_count = 0;
 
-    List<int> Qnumbers = new List<int>();
+    public List<int> numbers = new List<int>();
 
+    //解答欄のシャッフル用
     int[] Anser = new int[4] { 1, 2, 3, 4 };
-    int[] Question = new int[100];
 
-    int start = 1;
-    int end = 100;
-    int R_count = 1;
     public int ransu = 0;
+
+
+   
 
     void Start()
     {
-        //1～１００をランダムで一つ取得
-        rnd = UnityEngine.Random.Range(1, 101);
+        PlayerPrefs.GetInt("list_onedake",0);//取得
+        PlayerPrefs.GetInt("numbers", 0);//取得
+        PlayerPrefs.GetInt("List_count", 0);//取得
 
-        //重複させない
-        for(int i = start; i <= end; i++)
+       //Listシャッフルはできている
+       //Listの保存と呼び出しができているかがわからない
+       //今は重複する
+
+
+
+        //初回だけ
+        if (list_onedake == 0)
         {
-            Qnumbers.Add(i);
+            //リストに１００個順番に入れる
+            for (int k = 1; k <= 101; k++)
+            {
+                numbers.Add(k);
+            }
+            //もう動かないように数値を変更
+            list_onedake += 1;
+
+            PlayerPrefs.SetInt("list_onedake", list_onedake);//保存
+
+            Shuffle();
         }
-        while(R_count -- > 0)
-        {
-            int index = Randam.Range(0, Qnumbers.Count);
-
-            ransu = Qnumbers[index];
-
-            Debug.Log(ransu);
-
-            Qnumbers.RemoveAt(index);
-        }
-
-        Randam();
+       
+        QRandam();
     }
 
     public static csvReader instance;
@@ -66,9 +75,19 @@ public class csvReader : MonoBehaviour
         SceneManager.LoadScene("Title");
     }
 
-    public void Randam()
+    void Shuffle()
     {
-        //ランダム1～20
+        //シャッフルしてる
+        numbers = numbers.OrderBy(a => Guid.NewGuid()).ToList();
+       
+        for(int g = 0; g <= 100; g++)
+        {
+            PlayerPrefs.SetInt("numbers", numbers[g]);//保存
+        }
+    }
+
+    public void QRandam()
+    {
         
 
         csvFile = Resources.Load("question") as TextAsset; // ResourcesにあるCSVファイルを格納
@@ -101,23 +120,27 @@ public class csvReader : MonoBehaviour
         Text s4Label = GameObject.Find("select4").GetComponentInChildren<Text>();
 
 
-        s1Label.text = csvData[rnd/*Qransu*/][1];
-        s2Label.text = csvData[rnd/*Qransu*/][2];
-        s3Label.text = csvData[rnd/*Qransu*/][3];
-        s4Label.text = csvData[rnd/*Qransu*/][4];
+        s1Label.text = csvData[numbers[List_count]/*Qransu*/][1];
+        s2Label.text = csvData[numbers[List_count]/*Qransu*/][2];
+        s3Label.text = csvData[numbers[List_count]/*Qransu*/][3];
+        s4Label.text = csvData[numbers[List_count]/*Qransu*/][4];
 
         //データをセットすることで、既存情報を上書きできる
 
         s3label = s3Label.text;
         Debug.Log(s3label);
 
-        qLabel.text = csvData[rnd/*Qransu*/][0];//rndでランダムに1～20問出題
+        qLabel.text = csvData[numbers[List_count]/*Qransu*/][0];//rndでランダムに1～20問出題
 
-        s1Label.text = csvData[rnd/*Qransu*/][Anser[0]];
-        s2Label.text = csvData[rnd/*Qransu*/][Anser[1]];
-        s3Label.text = csvData[rnd/*Qransu*/][Anser[2]];
-        s4Label.text = csvData[rnd/*Qransu*/][Anser[3]];
+        s1Label.text = csvData[numbers[List_count]/*Qransu*/][Anser[0]];
+        s2Label.text = csvData[numbers[List_count]/*Qransu*/][Anser[1]];
+        s3Label.text = csvData[numbers[List_count]/*Qransu*/][Anser[2]];
+        s4Label.text = csvData[numbers[List_count]/*Qransu*/][Anser[3]];
 
-       // Debug.Log(s3label);
+        List_count += 1;
+        PlayerPrefs.SetInt("List_count", List_count);//保存
+
+
+                                                     // Debug.Log(s3label);
     }
 }
