@@ -16,14 +16,7 @@ public class changeScene : MonoBehaviour
 
     public void change_button()
     {
-        if (Q_count == 3)
-        {
-            TitleSceneChange();
-        }
-        else
-        {
-            Invoke("SceneChange", 0.5f);
-        }
+        Invoke("SceneChange", 0.5f);
     }
 
     public void TitleSceneChange()

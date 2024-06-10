@@ -73,7 +73,7 @@ public class PHP : MonoBehaviour
 
 
                 //ゲームオーバー画面へ移行
-                GameOverChange();
+                Invoke("GameOverChange", 3);
             }
         }
     }
@@ -81,6 +81,6 @@ public class PHP : MonoBehaviour
     void GameOverChange()
     {
         //ゲームオーバー画面へ
-        SceneManager.LoadScene("Select");
+        SceneManager.LoadScene("GAMEOVER");
     }
 }

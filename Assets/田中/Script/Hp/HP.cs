@@ -68,21 +68,21 @@ public class HP: MonoBehaviour
             Destroy(gameObject);
 
             //7秒後に呼び出し
-            Invoke("ChangeScene_clear", 7);
+            ChangeSceneClear();
             Debug.Log(currentHp);
         }
         //5秒後に呼び出し
-        Invoke("ChangeScene_Interval", 5);
+        Invoke("ChangeSceneInterval", 5f);
 
 
     }
-    void ChangeScene_Interval()
+    void ChangeSceneInterval()
     {
         //第何問シーンへ
         SceneManager.LoadScene("Stage3 interval");
     }
 
-    void ChangeScene_clear()
+    void ChangeSceneClear()
     {
         //クリアシーンへ
         SceneManager.LoadScene("clear");

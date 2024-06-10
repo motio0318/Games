@@ -511,7 +511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106, y: -351}
+  m_AnchoredPosition: {x: 80, y: -227}
   m_SizeDelta: {x: 664.1407, y: 160.2789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533634638
@@ -559,7 +559,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1533634641}
-        m_TargetAssemblyTypeName: ClearButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: Title_he, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -617,11 +617,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1533634636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2e7c4cd88c6d242ae965283c136cb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 187d78b38dffaf242998a995733f18a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   submitSE: {fileID: 4478308734081190862, guid: 2258ea6ea9dc72246a77236bb3bd8476, type: 3}
-  Count: 0
 --- !u!1 &1628755217
 GameObject:
   m_ObjectHideFlags: 0
