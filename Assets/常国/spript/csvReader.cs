@@ -128,7 +128,7 @@ public class csvReader : MonoBehaviour
         //データをセットすることで、既存情報を上書きできる
 
         s3label = s3Label.text;
-        Debug.Log(s3label);
+        //Debug.Log(s3label);
 
         qLabel.text = csvData[numbers[List_count]/*Qransu*/][0];//rndでランダムに1～20問出題
 

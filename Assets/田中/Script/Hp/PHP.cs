@@ -9,8 +9,15 @@ public class PHP : MonoBehaviour
     public static int P_Hp = 3;
     public int P_HP_herasu = 1;
 
+   public GameObject obj1;
+   public GameObject obj2;
+   public GameObject obj3;
+
+
+
     void Awake()
     {
+
         PlayerPrefs.GetInt("P_Hp", 0);
     }
 
@@ -18,34 +25,53 @@ public class PHP : MonoBehaviour
     void Start()
     {
         PHP_herasu();
+
+       
+
     }
 
     void PHP_herasu()
     {
+
         changeScene ChangeScene = GetComponent<changeScene>();
 
 
         // NextButttonが押されたかどうかを検出
-        if (changescene.cnt2 == true)
+        if (changeScene.cnt2 == true)
         {
+
             P_Hp -= P_HP_herasu;
-            PlayerPrefs.SetInt("P_Hp", P_Hp);
+            Debug.Log(P_Hp);
+
 
             if (P_Hp == 2)
             {
+                PlayerPrefs.SetInt("P_Hp", P_Hp);
+                changeScene.cnt2 = false;
+                this.obj1.SetActive(false);
+
+
+            }
+
+            if (P_Hp == 1)
+            {
+
                 //HP３を減らす
 
-                cnt2 = false;
-            }
-            else if (P_Hp == 1)
-            {
-                //HP２を減らす
+                changeScene.cnt2 = false;
+                this.obj1.SetActive(false);
+                this.obj2.SetActive(false);
 
-                cnt2 = false;
+
             }
             else if (P_Hp == 0)
             {
-                cnt2 = false;
+                changeScene.cnt2 = false;
+                this.obj1.SetActive(false);
+                this.obj2.SetActive(false);
+                this.obj3.SetActive(false);
+
+
                 //ゲームオーバー画面へ移行
                 GameOverChange();
             }
