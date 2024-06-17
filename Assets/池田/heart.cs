@@ -11,6 +11,7 @@ public class heart : MonoBehaviour
     public void OnClick()
     {
         lifeArray[lifePoint - 1].SetActive(false);
+    
         lifePoint--;
     }
     void Update()
